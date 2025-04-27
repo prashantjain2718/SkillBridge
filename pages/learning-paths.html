@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Paths - SkillBridge</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/learning-paths.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="light-theme">
+    <nav class="navbar">
+        <div class="navbar-left">
+            <img src="../assets/logo.png" alt="SkillBridge Logo" class="logo">
+            <span class="brand">SkillBridge</span>
+        </div>
+        <div class="nav-right">
+            <button id="themeToggle" class="btn btn-icon" title="Toggle theme">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </nav>
+
+    <div class="main-container">
+        <aside class="sidebar">
+            <div class="sidebar-menu">
+                <a href="home.html" class="sidebar-item">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a>
+                <a href="profile.html" class="sidebar-item">
+                    <i class="fas fa-user"></i>
+                    <span>Profile</span>
+                </a>
+                <a href="learning-paths.html" class="sidebar-item active">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>Learning Paths</span>
+                </a>
+                <a href="#" class="sidebar-item">
+                    <i class="fas fa-exchange-alt"></i>
+                    <span>Exchanges</span>
+                </a>
+                <a href="#" class="sidebar-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>Messages</span>
+                </a>
+            </div>
+            <div class="sidebar-footer">
+                <button id="logoutBtn" class="btn btn-outline">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Logout</span>
+                </button>
+            </div>
+        </aside>
+
+        <main class="content">
+            <div class="welcome-section">
+                <h1 id="userGreeting">Welcome back!</h1>
+                <p>Choose a learning path to start your journey</p>
+            </div>
+
+            <div class="learning-paths-grid" id="learningPathsContainer">
+                <!-- Learning paths will be populated here -->
+            </div>
+        </main>
+    </div>
+
+    <footer id="footer" class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>SkillBridge</h3>
+                <p>Empowering Growth, Connecting Dreams</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <a href="home.html">Home</a>
+                <a href="profile.html">Profile</a>
+                <a href="learning-paths.html">Learning Paths</a>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: your.email@example.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 SkillBridge. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script type="module" src="../js/theme-toggle.js"></script>
+    <script type="module" src="../js/skillbridge-learning-paths.js"></script>
+</body>
+</html> 

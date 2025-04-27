@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Skills - SkillBridge</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/search.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="light-theme">
+    <nav class="navbar">
+        <!-- Same navbar as index.html -->
+    </nav>
+
+    <main class="search-container">
+        <div class="search-header">
+            <h1>Find Skills & Connect</h1>
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Search for skills or people...">
+                <button id="searchBtn">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+            <div class="filter-options">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="skills">Skills</button>
+                <button class="filter-btn" data-filter="people">People</button>
+            </div>
+        </div>
+
+        <div class="search-results">
+            <div class="results-grid" id="searchResults">
+                <!-- Results will be added dynamically -->
+            </div>
+        </div>
+
+        <div class="pagination">
+            <button class="prev-page" disabled>
+                <i class="fas fa-chevron-left"></i> Previous
+            </button>
+            <div class="page-numbers">
+                <span class="current-page">1</span> of <span class="total-pages">1</span>
+            </div>
+            <button class="next-page" disabled>
+                Next <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+    </main>
+
+    <script src="../js/search.js"></script>
+</body>
+</html> 

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup - SkillBridge</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:700,400&display=swap" rel="stylesheet">
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-left">
+            <img src="assets/logo.png" alt="SkillBridge Logo" class="logo">
+            <span class="brand">SkillBridge</span>
+            <div class="menu">
+                <a href="index.html" class="menu-link">Home</a>
+                <a href="#about" class="menu-link">About</a>
+                <a href="#footer" class="menu-link">Contact</a>
+            </div>
+        </div>
+        <div class="menu-right">
+            <a href="login.html" class="btn">Login</a>
+            <a href="signup.html" class="btn btn-primary">Signup</a>
+        </div>
+    </nav>
+    <main>
+        <section class="form-section">
+            <form id="signupForm" class="auth-form">
+                <h2>Sign Up</h2>
+                <div class="auth-form-desc">Join SkillBridge and start sharing your skills today!</div>
+                <input type="text" id="name" placeholder="Full Name" required>
+                <input type="email" id="email" placeholder="Email" required>
+                <input type="password" id="password" placeholder="Password" required>
+                <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
+                <button type="submit">Sign Up</button>
+                <div id="signupError" class="form-error"></div>
+                <div id="signupSuccess" class="form-success"></div>
+                <p>Already have an account? <a href="login.html">Login here.</a></p>
+            </form>
+        </section>
+    </main>
+    <footer id="footer">
+        <div class="footer-links">
+            <a href="#about">About Us</a>
+            <a href="#">Help</a>
+            <a href="#">Contact</a>
+            <a href="#">FAQ</a>
+        </div>
+        <div class="footer-desc">
+            Empowering Growth, Connecting Dreams
+        </div>
+        <div class="footer-copy">
+            &copy; 2025 SkillBridge
+        </div>
+    </footer>
+    <script type ="module" src="js/signup.js"></script>
+</body>
+</html> 

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - SkillBridge</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/profile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:700,400&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="../assets/logo.png" type="image/png">
+</head>
+<body class="light-theme">
+    <nav class="navbar">
+        <div class="navbar-left">
+            <div class="navbar-brand">
+                <img src="../assets/logo.png" alt="SkillBridge Logo" class="logo">
+                <span class="brand">SkillBridge</span>
+            </div>
+            <div class="menu">
+                <a href="../pages/home.html" class="menu-link">Home</a>
+                <a href="../index.html#about" class="menu-link">About</a>
+                <a href="../index.html#footer" class="menu-link">Contact</a>
+            </div>
+        </div>
+        <div class="menu-right">
+            <button id="themeToggle" class="btn btn-icon" title="Toggle theme">
+                <i class="fas fa-moon"></i>
+            </button>
+            <button id="logoutBtn" class="btn btn-outline">
+                <i class="fas fa-sign-out-alt"></i>
+                <span>Logout</span>
+            </button>
+        </div>
+    </nav>
+
+    <main class="profile-container">
+        <div class="profile-card" id="profileCard">
+            <div class="profile-avatar-section">
+                <img id="profilePic" src="../assets/profile-placeholder.png" alt="Profile Picture" class="profile-avatar-img">
+                <input type="file" id="profilePicInput" accept="image/*" style="display:none;">
+                <button class="edit-avatar-btn" id="editAvatarBtn" title="Change profile picture">
+                    <i class="fas fa-camera"></i>
+                </button>
+            </div>
+            <div class="profile-info-section">
+                <h1 id="userName">Loading...</h1>
+                <p id="userEmail" class="user-email">Loading...</p>
+                <p id="userBio" class="user-bio">Loading...</p>
+                <button class="edit-profile-btn" id="editProfileBtn">
+                    <i class="fas fa-edit"></i> Edit Profile
+                </button>
+            </div>
+            <div class="skill-box-section">
+                <h3>Manage Your Skills</h3>
+                <div class="skill-boxes-inline-wrapper">
+                    <div class="skill-inline-group">
+                        <label for="newSkillToShareInput"><strong>Skill to Share:</strong></label>
+                        <div id="skillsToShareBox" class="skill-box-container"></div>
+                        <input type="text" id="newSkillToShareInput" placeholder="Add a skill to share">
+                        <button id="addSkillToShareBtn" class="btn btn-primary">Add</button>
+                    </div>
+                    <div class="skill-inline-group">
+                        <label for="newSkillToLearnInput"><strong>Skill to Learn:</strong></label>
+                        <div id="skillsToLearnBox" class="skill-box-container"></div>
+                        <input type="text" id="newSkillToLearnInput" placeholder="Add a skill to learn">
+                        <button id="addSkillToLearnBtn" class="btn btn-primary">Add</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="profileEditModal" class="modal" style="display:none;">
+            <div class="modal-content">
+                <span class="close" id="closeEditModal">&times;</span>
+                <h2>Edit Profile</h2>
+                <form id="profileEditForm">
+                    <label>Name:</label>
+                    <input type="text" id="editName" required>
+                    <label>Email:</label>
+                    <input type="email" id="editEmail" required>
+                    <label>Mobile Number:</label>
+                    <input type="text" id="editMobile">
+                    <label>Bio:</label>
+                    <input type="text" id="editBio" maxlength="80">
+                    <label>Profile Picture:</label>
+                    <input type="file" id="editProfilePic" accept="image/*">
+                    <button type="submit" class="btn btn-primary" style="margin-top:1rem;">Save Changes</button>
+                    <div id="profileEditMsg" style="margin-top:0.7rem;"></div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer id="footer" class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>SkillBridge</h3>
+                <p>Empowering Growth, Connecting Dreams</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <a href="../index.html">Home</a>
+                <a href="profile.html">Profile</a>
+                <a href="learning-paths.html">Learning Paths</a>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: prashantjain.code@gmail.com</p>
+                <p>Phone: 9587475325</p>
+                <p>Address: ACEIT, Jaipur, Rajasthan, India</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 SkillBridge. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script type="module" src="../js/theme-toggle.js"></script>
+    <script type="module" src="../js/skillbridge-profile.js"></script>
+</body>
+</html> 

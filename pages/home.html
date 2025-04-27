@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - SkillBridge</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="shortcut icon" href="/assets/home.png" type="image/png">
+</head>
+<body class="light-theme">
+    <nav class="navbar">
+        <div class="navbar-left">
+            <img src="../assets/logo.png" alt="SkillBridge Logo" class="logo">
+            <span class="brand">SkillBridge</span>
+        </div>
+        <div class="nav-right">
+            <button id="themeToggle" class="btn btn-icon" title="Toggle theme">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </nav>
+
+    <div class="main-container">
+        <aside class="sidebar">
+            <div class="sidebar-menu">
+                <a href="home.html" class="sidebar-item active">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a>
+                <a href="profile.html" class="sidebar-item">
+                    <i class="fas fa-user"></i>
+                    <span>Profile</span>
+                </a>
+                <a href="learning-paths.html" class="sidebar-item" id="learningPathsLink">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>Learning Paths</span>
+                </a>
+                <a href="#" class="sidebar-item">
+                    <i class="fas fa-exchange-alt"></i>
+                    <span>Exchanges</span>
+                </a>
+                <a href="#" class="sidebar-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>Messages</span>
+                </a>
+            </div>
+            <div class="sidebar-footer">
+                <button id="logoutBtn" class="btn btn-outline">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Logout</span>
+                </button>
+            </div>
+        </aside>
+
+        <main class="content">
+            <div class="welcome-section">
+                <h1 id="userGreeting">Welcome back!</h1>
+                <p>Continue your learning journey or explore new skills</p>
+            </div>
+
+            <div class="search-section">
+                <div class="search-container">
+                    <input type="text" id="skillSearch" placeholder="Search for skills...">
+                    <i class="fas fa-search"></i>
+                </div>
+                <select id="skillTypeFilter">
+                    <option value="all">All Skills</option>
+                    <option value="teach">Skills to Share</option>
+                    <option value="learn">Skills to Learn</option>
+                </select>
+            </div>
+
+            <div class="dashboard-grid">
+                <div class="dashboard-card matches-card">
+                    <div class="card-header">
+                        <i class="fas fa-handshake"></i>
+                        <h2>Potential Matches</h2>
+                    </div>
+                    <div class="matches-list" id="matchesList">
+                        <!-- Matches will be populated here -->
+                    </div>
+                </div>
+
+                <div class="dashboard-card activity-card">
+                    <div class="card-header">
+                        <i class="fas fa-clock"></i>
+                        <h2>Recent Activity</h2>
+                    </div>
+                    <div class="activity-list" id="activityList">
+                        <!-- Activity will be populated here -->
+                    </div>
+                </div>
+
+                <div class="dashboard-card progress-card">
+                    <div class="card-header">
+                        <i class="fas fa-chart-line"></i>
+                        <h2>Learning Progress</h2>
+                    </div>
+                    <div class="progress-tracker">
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="progressFill"></div>
+                        </div>
+                        <div class="progress-stats">
+                            <span>Completed: <strong id="completedCount">0</strong></span>
+                            <span>In Progress: <strong id="inProgressCount">0</strong></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dashboard-card resources-card">
+                    <div class="card-header">
+                        <i class="fas fa-book"></i>
+                        <h2>Learning Resources</h2>
+                    </div>
+                    <div class="resources-list">
+                        <a href="#" class="resource-item">
+                            <i class="fas fa-video"></i>
+                            <span>Video Tutorials</span>
+                        </a>
+                        <a href="#" class="resource-item">
+                            <i class="fas fa-file-alt"></i>
+                            <span>Documentation</span>
+                        </a>
+                        <a href="#" class="resource-item">
+                            <i class="fas fa-code"></i>
+                            <span>Code Examples</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="users-grid" id="usersGrid">
+                <!-- Users will be populated here -->
+            </div>
+        </main>
+    </div>
+
+    <footer id="footer" class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>SkillBridge</h3>
+                <p>Empowering Growth, Connecting Dreams</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <a href="home.html">Home</a>
+                <a href="profile.html">Profile</a>
+                <a href="learning-paths.html">Learning Paths</a>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: prashantjain.code@gmail.com</p>
+                <p>Phone: 9587475325</p>
+                <p>Address: ACEIT, Jaipur, Rajasthan, India</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 SkillBridge. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script type="module" src="../js/theme-toggle.js"></script>
+    <script type="module" src="../js/skillbridge-home.js"></script>
+</body>
+</html> 

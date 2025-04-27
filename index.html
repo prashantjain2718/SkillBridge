@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SkillBridge</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/home.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:700,400&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="assets/logo.png" type="image/png">
+</head>
+
+<body class="light-theme">
+  <nav class="navbar">
+    <div class="navbar-left">
+      <div class="navbar-brand">
+        <img src="assets/logo.png" alt="SkillBridge Logo" class="logo">
+        <span class="brand">SkillBridge</span>
+      </div>
+      <div class="menu">
+        <a href="index.html" class="menu-link">Home</a>
+        <a href="#about" class="menu-link">About</a>
+        <a href="#footer" class="menu-link">Contact</a>
+      </div>
+    </div>
+    <div class="menu-right">
+      <a href="login.html" class="btn">Login</a>
+      <a href="signup.html" class="btn btn-primary">Signup</a>
+    </div>
+  </nav>
+  <main>
+    <section class="hero-section">
+      <div class="hero-content">
+        <div class="hero-title">SkillBridge: Connecting Skills, Building Futures</div>
+        <div class="hero-subtitle">Empowering Growth, Connecting Dreams</div>
+        <a href="#about" class="hero-btn">Get Started</a>
+      </div>
+      <div class="hero-image-container">
+        <img src="assets/hero.jpg" alt="Collaboration" class="hero-img">
+        <div class="hero-overlay"></div>
+      </div>
+    </section>
+    <section id="about">
+      <div class="about-title">What is SkillBridge?</div>
+      <div class="about-desc">
+        SkillBridge is a peer-to-peer platform that connects students to learn and teach skills collaboratively — no
+        money involved, just passion and growth!
+      </div>
+      <ul class="about-bullets">
+        <li>Offer your skills and help others grow</li>
+        <li>Learn new things from fellow students</li>
+        <li>Collaborate and connect with your community</li>
+      </ul>
+    </section>
+    <section id="about-us" class="info-section">
+      <h2>About Us</h2>
+      <div class="about-content">
+        <p>SkillBridge was founded with a vision to create a community-driven learning platform where students can
+          exchange knowledge and skills without financial barriers. Our platform fosters a culture of collaborative
+          learning and mutual growth.</p>
+        <p>We believe that everyone has something valuable to teach and something new to learn. By connecting students
+          with diverse skills and interests, we create opportunities for meaningful knowledge exchange and community
+          building.</p>
+      </div>
+    </section>
+
+    <section id="help" class="info-section">
+      <h2>Help Center</h2>
+      <div class="help-content">
+        <div class="help-item">
+          <h3>Getting Started</h3>
+          <p>Create an account, complete your profile, and start exploring skills you can learn or teach.</p>
+        </div>
+        <div class="help-item">
+          <h3>Finding Skills</h3>
+          <p>Browse through available skills or use the search function to find specific topics you're interested in.
+          </p>
+        </div>
+        <div class="help-item">
+          <h3>Offering Skills</h3>
+          <p>List your skills, set your availability, and connect with students eager to learn from you.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="info-section">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-content">
+        <div class="faq-item">
+          <h3>How does SkillBridge work?</h3>
+          <p>SkillBridge connects students who want to learn with those who want to teach. You can offer your skills to
+            others and learn new skills in return.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Is SkillBridge really free?</h3>
+          <p>Yes! SkillBridge operates on a skill-exchange basis. No money is involved - you teach what you know and
+            learn what you don't.</p>
+        </div>
+        <div class="faq-item">
+          <h3>How do I start teaching?</h3>
+          <p>Simply create an account, list your skills, and set your availability. Students will be able to find and
+            connect with you.</p>
+        </div>
+        <div class="faq-item">
+          <h3>How do I find someone to learn from?</h3>
+          <p>Browse through available skills or use our search function to find teachers offering the skills you want to
+            learn.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="info-section">
+      <h2>Contact Us</h2>
+      <div class="contact-content">
+        <div class="contact-info">
+          <h3>Get in Touch</h3>
+          <p>Email: prashantjain.code@gmail.com</p>
+          <p>Phone: 9587475325</p>
+          <p>Address: ACEIT, Jaipur, Rajasthan, India</p>
+        </div>
+        <div class="contact-form">
+          <h3>Send us a Message</h3>
+          <form id="contactForm" action="https://formspree.io/f/mjkwkabp" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+          </form>
+          
+
+          <!-- Hidden thank you message -->
+          <div id="thankYouMessage" style="display:none; margin-top:20px; color: green; font-weight: bold;">
+            🎉 Thank you! Your message has been sent successfully.
+          </div>
+
+          <script>
+            const form = document.getElementById('contactForm');
+            const thankYouMessage = document.getElementById('thankYouMessage');
+
+            form.addEventListener('submit', async (e) => {
+              e.preventDefault();
+
+              const formData = new FormData(form);
+              const response = await fetch(form.action, {
+                method: form.method,
+                body: formData,
+                headers: {
+                  'Accept': 'application/json'
+                }
+              });
+
+              if (response.ok) {
+                form.style.display = 'none'; // Hide the form
+                thankYouMessage.style.display = 'block'; // Show Thank You
+                form.reset();
+              } else {
+                alert('Oops! Something went wrong. Please try again.');
+              }
+            });
+          </script>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer id="footer">
+    <div class="footer-links">
+      <a href="#about">About Us</a>
+      <a href="#help">Help</a>
+      <a href="#contact">Contact</a>
+      <a href="#faq">FAQ</a>
+    </div>
+    <div class="footer-desc">
+      Empowering Growth, Connecting Dreams
+    </div>
+    <div class="footer-copy">
+      &copy; 2025 SkillBridge
+    </div>
+  </footer>
+  <script src="js/theme-toggle.js"></script>
+  <script src="js/skillbridge-home.js"></script>
+  <script>
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>
